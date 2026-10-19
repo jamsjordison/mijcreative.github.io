@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Iqbal Jamal — Digital Imaging Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Library untuk Logo Vektor (Email & WhatsApp) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#121212',
+                        carddark: '#1a1a1a',
+                        accent: '#f7f7f7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Transisi halus untuk modal preview */
+        #imageModal {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-300 font-sans antialiased selection:bg-accent selection:text-black">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#121212]/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-widest uppercase text-white">
+                M. IQBAL<span class="text-accent"> JAMAL</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-sm tracking-wider uppercase text-gray-400">
+                <a href="#work" class="hover:text-accent transition">Works</a>
+                <a href="#expertise" class="hover:text-accent transition">Expertise</a>
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:inline-block px-5 py-2 border border-accent text-accent text-xs font-semibold tracking-widest uppercase hover:bg-accent hover:text-black transition duration-300">
+                Let's Talk
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
+        <div class="max-w-3xl">
+            <span class="text-accent text-xs font-bold tracking-widest uppercase block mb-4">Digital Imaging Specialist</span>
+            <h1 class="text-4xl md:text-7xl font-light tracking-tight text-white mb-6 leading-tight">
+                Visual yang lebih kuat, dimulai dari <span class="font-normal italic text-accent"> detail yang tepat.
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl font-light mb-10 max-w-2xl">
+                Mengubah konsep mentah menjadi karya visual komersial berstandar dengan presisi, retouching tingkat lanjut, dan UI Scripting otomatisasi kustom untuk memastikan pemrosesan batch, masking, dan penyesuaian kanvas mematuhi standar brand guideline perusahaan secara instan dan efisien.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#work" class="px-8 py-4 bg-accent text-black font-semibold text-xs tracking-widest uppercase text-center hover:bg-white transition duration-300">
+                    Explore Portfolio
+                </a>
+                <a href="#contact" class="px-8 py-4 border border-gray-700 text-white font-semibold text-xs tracking-widest uppercase text-center hover:border-accent transition duration-300">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Grid Section (4 Kolom per Baris, Otomatis Turun/Enter) -->
+    <section id="work" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+            <div>
+                <span class="text-accent text-xs font-bold tracking-widest uppercase block mb-2">Selected Projects</span>
+                <h2 class="text-3xl md:text-5xl font-light text-white">Featured Digital Imaging Projects</h2>
+            </div>
+            <p class="text-gray-400 text-sm mt-4 md:mt-0 max-w-xs">
+                💡 <span class="text-white font-medium">Tips: <br> Klik pada gambar untuk preview secara penuh.
+            </p>
+        </div>
+
+        <!-- Kategori 1 (Corporate / Artist) -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-light text-white underline decoration-1 underline-offset-8 mb-3">Product Campaign Digital Imaging.</h3>
+            <p class="text-gray-400 text-sm font-light mb-6">Menyajikan visual yang profesional, menonjolkan karakter produk dan talent melalui proses retouching dan color grading yang natural.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Baris 1 -->
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797542/ANL_9867_-_DONE.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797542/ANL_9867_-_DONE.jpg" alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797537/BHP06409_-_Done.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797537/BHP06409_-_Done.jpg" alt="Project 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797523/NAL02990.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797523/NAL02990.jpg" alt="Project 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797449/NAL01997.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797449/NAL01997.jpg" alt="Project 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baris 2 (Otomatis turun ke bawah) -->
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797457/NAL02116.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797457/NAL02116.jpg" alt="Project 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797480/NAL02417.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797480/NAL02417.jpg" alt="Project 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797498/NAL02456.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797498/NAL02456.jpg" alt="Project 7" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797490/NAL02592.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797490/NAL02592.jpg" alt="Project 8" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kategori 2 (Product) -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-light text-white underline decoration-1 underline-offset-8 mb-3">Fashion & Lifestyle Digital Imaging</h3>
+            <p class="text-gray-400 text-sm font-light mb-6">Penerapan teknik remove background, retouching, penyesuaian cahaya dan dodging, serta pembuatan shadow pada sepatu untuk menciptakan komposisi gambar yang realistis.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Baris 1 -->
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791879840/LACPF7839166000-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791879840/LACPF7839166000-1.jpg" alt="Project 9" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791880978/MSS9009X-T43_NAVY-5.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791880978/MSS9009X-T43_NAVY-5.jpg" alt="Project 10" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797156/jd_IK8631_c.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797156/jd_IK8631_c.jpg" alt="Project 11" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791797126/jd_FUPTW16959007_a.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791797126/jd_FUPTW16959007_a.jpg" alt="Project 12" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baris 2 (Otomatis turun ke bawah) -->
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791878867/LACSH86371V1000-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791878867/LACSH86371V1000-1.jpg" alt="Project 13" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791819532/0777-MNG3704674237-4.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791819532/0777-MNG3704674237-4.jpg" alt="Project 14" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791878886/LACPF7839Z3T000-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791878886/LACPF7839Z3T000-1.jpg" alt="Project 15" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791879962/LACPH1981AHP000-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791879962/LACPH1981AHP000-1.jpg" alt="Project 16" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kategori 3 (Retouching) -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-light text-white underline decoration-1 underline-offset-8 mb-3">Apparel, Bags & Shoes</h3>
+            <p class="text-gray-400 text-sm font-light mb-6">Penggunaan teknik remove background, stitching, dan ghost mannequin untuk menciptakan ilusi produk 3D yang utuh, serta penambahan shadow berdimensi.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Baris 1 -->
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791879107/LACEF5761F9F000-3.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791879107/LACEF5761F9F000-3.jpg" alt="Project 17" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791881511/ES17F202BKS-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791881511/ES17F202BKS-1.jpg" alt="Project 18" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791880868/XW0XW03979DW5-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791880868/XW0XW03979DW5-1.jpg" alt="Project 19" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791880538/47B835GUB1-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791880538/47B835GUB1-1.jpg" alt="Project 20" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baris 2 (Otomatis turun ke bawah) -->
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791881309/CQJDH1875BLK-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791881309/CQJDH1875BLK-1.jpg" alt="Project 21" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791881690/SCZ2006101HB-4.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791881690/SCZ2006101HB-4.jpg" alt="Project 22" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791820267/img_2D_0002_2.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791820267/img_2D_0002_2.jpg" alt="Project 23" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791882167/LACNF3096SMD95-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791882167/LACNF3096SMD95-1.jpg" alt="Project 24" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kategori 4 (Creative Compositing) -->
+        <div>
+            <h3 class="text-2xl font-light text-white underline decoration-1 underline-offset-8 mb-3">Jewelry & Accessories</h3>
+            <p class="text-gray-400 text-sm font-light mb-6">Penerapan teknik remove background, retouching mikroskopis, penyesuaian cahaya, dan penambahan efek shadow agar produk tampil elegan dan berdimensi.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Baris 1 -->
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791820156/0100-SVI5743473-3.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791820156/0100-SVI5743473-3.jpg" alt="Project 25" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791820156/0100-SVI5753263-3.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791820156/0100-SVI5753263-3.jpg" alt="Project 26" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791882535/0100-SVI5745560-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791882535/0100-SVI5745560-1.jpg" alt="Project 27" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791882619/0100-SVI5747984-2.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791882619/0100-SVI5747984-2.jpg" alt="Project 28" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baris 2 (Otomatis turun ke bawah) -->
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791882247/MSS6573-T09Y0-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791882247/MSS6573-T09Y0-1.jpg" alt="Project 29" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791820156/0100-SVI5745534-2.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791820156/0100-SVI5745534-2.jpg" alt="Project 30" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791882963/0100-SVI5743643-4.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791882963/0100-SVI5743643-4.jpg" alt="Project 31" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-carddark overflow-hidden border border-gray-800">
+                    <div class="aspect-[3/4] relative bg-gray-900 overflow-hidden flex items-center justify-center cursor-pointer" onclick="openModal('https://res.cloudinary.com/wkfde9hh/image/upload/v1791881588/81-25-0032-1.jpg')">
+                        <img src="https://res.cloudinary.com/wkfde9hh/image/upload/v1791881588/81-25-0032-1.jpg" alt="Project 32" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <span class="px-3 py-1.5 bg-accent text-black font-semibold text-[10px] uppercase tracking-widest">Preview</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-24 px-6 bg-carddark border-t border-b border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <span class="text-accent text-xs font-bold tracking-widest uppercase block mb-2">Core Competencies</span>
+            <h2 class="text-3xl md:text-5xl font-light text-white mb-16">Technical Expertise</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- High-End Retouching -->
+                <div class="p-8 bg-dark border border-gray-800">
+                    <div class="text-accent text-2xl mb-4"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="text-lg font-medium text-white mb-3">High-End Retouching</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Penerapan teknik frequency separation, dodging & burning manual tanpa merusak tekstur asli, serta pembersihan cacat produk secara mikroskopis.
+                    </p>
+                </div>
+                <!-- Background Removal -->
+                <div class="p-8 bg-dark border border-gray-800">
+                    <div class="text-accent text-2xl mb-4"><i class="fa-solid fa-scissors"></i></div>
+                    <h3 class="text-lg font-medium text-white mb-3">Background Removal</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Pemisahan objek produk yang sangat presisi hingga ke detail mikroskopis seperti helai rambut, transparan kaca, dan bulu halus tanpa merusak bentuk asli.
+                    </p>
+                </div>
+                <!-- UI Scripting -->
+                <div class="p-8 bg-dark border border-gray-800">
+                    <div class="text-accent text-2xl mb-4"><i class="fa-solid fa-code"></i></div>
+                    <h3 class="text-lg font-medium text-white mb-3">UI Scripting</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        UI Scripting otomatisasi kustom untuk memastikan pemrosesan batch, masking, dan penyesuaian kanvas mematuhi standar brand guideline perusahaan secara instan dan efisien.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Rata Tengah / Centered) -->
+    <section id="about" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <div>
+            <span class="text-accent text-xs font-bold tracking-widest uppercase block mb-2">The Specialist</span>
+            <h2 class="text-3xl md:text-4xl font-light text-white mb-6 mx-auto">Menyempurnakan Visual dengan Presisi di Setiap Detail.</h2>
+            
+            <p class="text-gray-400 font-light leading-relaxed mb-4 mx-auto max-w-2xl">
+                Halo, saya M. Iqbal Jamal, Seorang Digital Imaging Specialist yang berfokus pada pengolahan serta penyempurnaan visual untuk fotografi produk, fashion, dan model. Saya berpengalaman bekerja sama dengan agensi fotografi serta berbagai pihak di industri kreatif untuk menghasilkan visual yang profesional, konsisten, dan sesuai dengan karakter setiap brand.
+            </p>
+            <p class="text-gray-400 font-light leading-relaxed mb-10 mx-auto max-w-2xl">
+                Berpengalaman mengolah foto produk dan model dari brand Intenasional, saya mengutamakan ketelitian, kualitas warna, detail, serta standar visual yang memenuhi kebutuhan komersial dan digital.
+            </p>
+            
+            <!-- Statistik Pengalaman Rata Tengah -->
+            <div class="flex justify-center gap-16 pt-8 border-t border-gray-800 max-w-xl mx-auto">
+                <div>
+                    <span class="block text-3xl font-light text-white mb-1">10+</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest">Years Experience</span>
+                </div>
+                <div>
+                    <span class="block text-3xl font-light text-white mb-1">20+</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-widest">Global Campaigns</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-carddark border-t border-gray-800">
+        <div class="max-w-3xl mx-auto text-center">
+            <span class="text-accent text-xs font-bold tracking-widest uppercase block mb-2">Get In Touch</span>
+            <h2 class="text-3xl md:text-5xl font-light text-white mb-6">Let's Create Something Exceptional.</h2>
+            <p class="text-gray-400 font-light mb-10 max-w-xl mx-auto">
+                Terbuka untuk proyek kolaborasi jangka panjang, freelance tingkat lanjut, maupun kebutuhan retouching komersial agensi internasional.
+            </p>
+            
+            <!-- Tombol Kontak -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                <!-- Tombol Email -->
+                <a href="mailto:mijjams1@gmail.com" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent text-black font-semibold text-xs tracking-widest uppercase hover:bg-white transition duration-300">
+                    <i class="fa-solid fa-envelope text-lg"></i>
+                    mijjams1@gmail.com
+                </a>
+                
+                <!-- Tombol WhatsApp -->
+                <a href="https://wa.me/6281990203003" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#25D366] text-[#25D366] font-semibold text-xs tracking-widest uppercase hover:bg-[#25D366] hover:text-black transition duration-300">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    +62 819-9020-3003
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 text-center border-t border-gray-900 text-xs text-gray-600 tracking-wider">
+        <p>&copy; 2026 M. Iqbal Jamal. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal Lightbox Preview (Zoom Sederhana) -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center">
+            <!-- Tombol Close -->
+            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white text-xl bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <!-- Gambar Preview -->
+            <img id="modalImg" src="" alt="Preview" class="max-w-full max-h-[85vh] object-contain rounded border border-gray-800 shadow-2xl">
+        </div>
+    </div>
+
+    <!-- Script Modal Zoom -->
+    <script>
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+
+            modalImg.src = imgSrc;
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
